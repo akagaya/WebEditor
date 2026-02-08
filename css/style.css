@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#wrapper {
+  font-family: "MS UI Gothic";
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 100vw;
+  align-items: stretch;
+}
+
+#header {
+  height: 3em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid black;
+  background-color: #ddd;
+}
+
+#header h1 {
+  margin-right: auto;
+}
+
+#header #option {
+  display: flex;
+  flex-direction: row;
+}
+
+#header #option > div {
+  margin-right: .5em;
+}
+
+#header #option > .flex-center {
+  display: flex;
+  align-items: center;
+}
+
+#header #option #editorvisible {
+  display: flex;
+  flex-direction: column;
+}
+
+#header #option #editorvisible label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#main {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-basis: auto;
+  height: calc(100vh - 3.5em);
+}
+
+#editor {
+  flex-grow: 5;
+  flex-basis: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#editor > div {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+  border: 1px solid black;
+}
+
+#editor > div h2 {
+  text-align: right;
+}
+
+#preview {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  -ms-flex-align: stretch;
+}
+
+#preview h2 {
+  text-align: right;
+}
+
+#preview #preview_frame {
+  flex-grow: 1;
+  display: flex;
+}
+
+#preview #preview_frame iframe {
+  flex-grow: 1;
+}
+
+.ace_editor {
+  display: flex;
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 768px) {
+  #editor {
+    display: none;
+  }
+  #header #option {
+    display: none;
+  }
+}
